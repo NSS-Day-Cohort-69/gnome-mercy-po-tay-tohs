@@ -8,5 +8,9 @@
 export const GnomeMercy = () => {
   return `
     <h1>Gnome Mercy</h1>
+    <article class="choices">
+      <section class="form">
+      </section>
+    </article>
     `;
 };
