@@ -10,10 +10,17 @@
 */
 
 import { GnomeMercy } from "./GnomeMercy.js";
+import { RequestForm } from "./RequestForm.js";
 
 const mainContainer = document.querySelector("#container");
 
-const render = () => {
+const render = async () => {
+  const gnomeMercyHTML = GnomeMercy();
+  const requestFormHTML = RequestForm();
+
+  mainContainer.innerHTML = `
+  ${gnomeMercyHTML}
+  ${requestFormHTML}`;
   /*
         Fetch all of the database so that it's stored in 
         application state. After all data is fetched, 
