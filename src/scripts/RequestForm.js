@@ -3,11 +3,6 @@
     Generate HTML for the request form. When Submit button
     is clicked, POST a new request to the API.
 */
-const dropDown = () => {};
-document.addEventListener("click", (clickEvt) => {
-  if (clickEvt.target.id === "submitRequest") {
-  }
-});
 
 export const RequestForm = () => {
   let html = `
@@ -20,7 +15,8 @@ export const RequestForm = () => {
      <select id="types" name="type">
      <option value="" selected disabled hidden>--Select A Type--</option>
      <option value="potion">Potion</option>
-     <option value="elixir">Elixir</option></select> 
+     <option value="elixir">Elixir</option>
+     </select> 
 
      <button class="button" id="submitRequest">Submit Request</button>
     </div>
