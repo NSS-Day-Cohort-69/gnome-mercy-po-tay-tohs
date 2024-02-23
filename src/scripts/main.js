@@ -14,7 +14,7 @@ import { GnomeMercy } from "./GnomeMercy.js";
 const mainContainer = document.querySelector("#container");
 
 const render = async () => {
-  const gnomeMercyHTML = GnomeMercy();
+  const gnomeMercyHTML = await GnomeMercy();
   mainContainer.innerHTML = `
   ${gnomeMercyHTML}`;
   /*

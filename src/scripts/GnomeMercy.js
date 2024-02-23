@@ -9,11 +9,11 @@ import { craftRequest } from "./CraftRequests.js";
 import { getCrafters } from "./Crafters.js";
 import { ingredients } from "./Ingredients.js";
 
-export const GnomeMercy = () => {
+export const GnomeMercy = async () => {
   const requestHTML = RequestForm();
   const requestOptionsHTML = craftRequest();
-  const crafterHTML = getCrafters();
-  const ingredientHTML = ingredients();
+  const crafterHTML = await getCrafters();
+  const ingredientHTML = await ingredients();
   return `
     <h1>Gnome Mercy</h1>
     <article class="choices">
